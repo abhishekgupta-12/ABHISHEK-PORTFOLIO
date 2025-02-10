@@ -28,12 +28,12 @@ html{
 
 .linghub {
     display: flex;
-    gap: 20px; /* Adds spacing between links */
+    gap: 10px; /* Adds spacing between links */
     align-items: center;
 }
 
 .linghub a {
-    display: flex;
+    display:inline-block;
     align-items: center;
     font-size: 18px;
     text-decoration: none;
@@ -790,6 +790,7 @@ footer span a:hover{
     }
     .services .serv-content .card{
         width: calc(50% - 10px);
+        height: 100%;
         margin-bottom: 20px;
     }
     .skills .skills-content .column,
@@ -1114,3 +1115,30 @@ footer span a:hover{
         font-size: 20px;
     }
 }  
+@media (max-width: 768px) { 
+    .services .title::after {
+        transform: translateX(-50%) translateY(30px); /* Moves it down */
+       
+       
+    }
+    .education-wrapper {
+        display: flex;
+        flex-direction:column;
+        gap:20px;
+        align-items: center;
+    }
+    .resume-card
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .linghub a{
+        width: 140px;
+       padding-right: 10px;
+    }  
+    .skills .title::after{
+        transform: translateX(-50%) translateY(25px);
+    }  
+   
+}
+
